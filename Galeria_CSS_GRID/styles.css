@@ -1,0 +1,104 @@
+body{
+    background-color: #202020;
+    padding: 40px;
+}
+h1{
+    text-align: center;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.gallery{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'i1 i1 i2 i3'
+                         'i4 i5 i2 i6'
+                         'i4 i7 i8 i6'
+                         'i9 i7 i10 i10';
+    grid-auto-rows: 120px;
+}
+@media (max-width: 768px){
+    .gallery{
+        grid-auto-rows: 200px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'i1'
+                             'i2'
+                             'i3'
+                             'i4'
+                             'i5'
+                             'i6'
+                             'i7'
+                             'i8'
+                             'i9'
+                             'i10';
+    }
+    
+}
+.item{
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.i1{
+    grid-area: i1;
+    background-color: #c7c7ac;
+}
+
+.i2{
+    grid-area: i2;
+    background-color: #cc9a9a;
+}
+
+.i3{
+    grid-area: i3;
+    background-color: #ee8de1;
+}
+
+.i4{
+    grid-area: i4;
+    background-color: #8b89d4;
+}
+
+.i5{
+    grid-area: i5;
+    background-color: aquamarine;
+}
+
+.i6{
+    grid-area: i6;
+    background-color: brown;
+}
+
+.i7{
+    grid-area: i7;
+    background-color: yellowgreen;
+}
+
+.i8{
+    grid-area: i8;
+    background-color: wheat;
+}
+
+.i9{
+    grid-area: i9;
+    background-color: white;
+}
+
+.i10{
+    grid-area: i10;
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
