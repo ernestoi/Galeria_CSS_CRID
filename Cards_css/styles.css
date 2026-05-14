@@ -36,11 +36,48 @@ h1{
 .cards-container .card .img-content{
     width: 100%;
     overflow: hidden;
+    background-color: #0096a7;
+    border-radius: .5rem;
+    position: relative;
+    cursor: pointer;
 }
 .cards-container .card .img-content img{
     width: 100%;
-    border-radius: .5rem;
+    display: block;
+    
 }
+
+.cards-container .card .img-content .see-icon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards-container .card .img-content .see-icon::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(12, 197, 204, 0.5);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.cards-container .card .img-content .see-icon .fa-eye{
+    position: relative;
+    color: rgb(253, 255, 253);
+    font-size: 5rem;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.cards-container .card .img-content:hover .see-icon::before{
+    opacity: 1;
+}
+.cards-container .card .img-content:hover .fa-eye{
+    opacity: 1;
+}
+
 .card .info-content{
     width: 100%;
     border-bottom: 1px solid #21334b;
@@ -93,5 +130,13 @@ h1{
     color: #fff;
 }
 /*
-#0cc5cc
+RESPONSIVE
 */
+@media (max-width: 480px){
+    .card{
+        padding: 1.5rem;
+    }
+    .fa-eye{
+        font-size: 1.5rem;
+    }
+}
